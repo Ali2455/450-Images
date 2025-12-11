@@ -150,4 +150,61 @@
 
   <section class="gallery">
 
-    <!-- START OF AUTO GENERATED IMAGE LIST -->
+    <!-- ALL IMAGES BELOW -->
+    <figure><img src="1-boxplot_discount.png"><figcaption>1 boxplot discount</figcaption></figure>
+    <figure><img src="10-boxplot_discount_bymonth_grouped.png"><figcaption>10 boxplot discount by month grouped</figcaption></figure>
+    <figure><img src="11-boxplot_orders_grouped.png"><figcaption>11 boxplot orders grouped</figcaption></figure>
+    <figure><img src="12-histogram_orders_grouped.png"><figcaption>12 histogram orders grouped</figcaption></figure>
+    <figure><img src="13-boxplot_orders_bydepartment_grouped.png"><figcaption>13 boxplot orders by department grouped</figcaption></figure>
+    <figure><img src="14-boxplot_orders_bydepartment_grouped_cleaned.png"><figcaption>14 boxplot orders by department grouped cleaned</figcaption></figure>
+    <figure><img src="15-boxplot_orders_bymonth_grouped_cleaned.png"><figcaption>15 boxplot orders by month grouped cleaned</figcaption></figure>
+    <figure><img src="15-histogram_orders_department_grouped_cleaned.png"><figcaption>15 histogram orders department grouped cleaned</figcaption></figure>
+    <figure><img src="16-boxplot_orders_bymonth_grouped_cleaned.png"><figcaption>16 boxplot orders by month grouped cleaned</figcaption></figure>
+    <figure><img src="17-scatterplot_discounts_orders.png"><figcaption>17 scatterplot discounts orders</figcaption></figure>
+    <figure><img src="17-scatterplot_discounts_orders_grouped.png"><figcaption>17 scatterplot discounts orders grouped</figcaption></figure>
+    <figure><img src="18-scatterplot_discounts_orders_bydepartment_grouped.png"><figcaption>18 scatterplot discounts orders by department grouped</figcaption></figure>
+    <figure><img src="18-scatterplot_discounts_orders_bydepartment_grouped_cleaned.png"><figcaption>18 scatterplot discounts orders by department grouped cleaned</figcaption></figure>
+    <figure><img src="19-scatterplot_discounts_orders_bymonth_grouped_cleaned.png"><figcaption>19 scatterplot discounts orders by month grouped cleaned</figcaption></figure>
+    <figure><img src="2-histogram_discounts.png"><figcaption>2 histogram discounts</figcaption></figure>
+    <figure><img src="3-boxplot_orders.png"><figcaption>3 boxplot orders</figcaption></figure>
+    <figure><img src="4-histogram_orders.png"><figcaption>4 histogram orders</figcaption></figure>
+    <figure><img src="5-line-graph-orders-month-year.png"><figcaption>5 line graph orders month year</figcaption></figure>
+    <figure><img src="6-bar-chart-orders-department.png"><figcaption>6 bar chart orders department</figcaption></figure>
+    <figure><img src="7-boxplot_discount_grouped.png"><figcaption>7 boxplot discount grouped</figcaption></figure>
+    <figure><img src="8-histogram_discounts_grouped.png"><figcaption>8 histogram discounts grouped</figcaption></figure>
+    <figure><img src="9-boxplot_discount_bydepartment_grouped.png"><figcaption>9 boxplot discount by department grouped</figcaption></figure>
+
+  </section>
+</main>
+
+<div id="lightbox">
+  <img id="lightbox-img" src="">
+  <div id="lightbox-close">Close ✕</div>
+</div>
+
+<script>
+  const imgs = document.querySelectorAll("figure img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.getElementById("lightbox-close");
+
+  imgs.forEach(img => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add("visible");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("visible");
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      lightbox.classList.remove("visible");
+    }
+  });
+</script>
+
+</body>
+</html>
